@@ -25,7 +25,7 @@ body {
 /* LEFT COLUMN - IMAGE */
 .left {
     position: relative;
-    background: url(Image/Sarah.jpeg) center/cover no-repeat; /* USE YOUR IMAGE */
+    background: url(Image/Sarah.jpeg) center/cover no-repeat;
     min-height: 800px;
 }
 .left::after {
@@ -84,7 +84,7 @@ body {
 
 h3 {
     font-weight: 700;
-    color: #f59e0b; /* ORANGE LIKE IMAGE */
+    color: #f59e0b; /* ORANGE */
     font-size: 0.9rem;
     letter-spacing: 1.5px;
     margin-bottom: 18px;
@@ -104,9 +104,11 @@ h3 {
     color: #d1d5db;
 }
 
+/* FIXED: spacing between label and dots */
 .info-row {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* keeps dots centered with text */
     border-bottom: 1px solid #2d3748;
     padding: 10px 0;
     font-size: 0.9rem;
@@ -119,6 +121,9 @@ h3 {
 .info-row span:last-child {
     font-weight: 400;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 14px; /* SPACE BETWEEN "LITERACY" AND DOTS */
 }
 
 .dots {
@@ -128,7 +133,7 @@ h3 {
 .dot {
     width: 10px;
     height: 10px;
-    background: #c7e845; /* LIME GREEN LIKE IMAGE */
+    background: #c7e845; /* LIME GREEN */
     border-radius: 50%;
 }
 
