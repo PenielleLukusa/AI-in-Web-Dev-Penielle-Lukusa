@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarah - User Persona</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+        background: #0a0f1e;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .persona-card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 1200px;
+        background: #121a2e;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* LEFT COLUMN */
+    .left {
+        position: relative;
+        background: url(Image/Sarah.jpeg) center/cover no-repeat;
+    }
+    .left::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60%;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+    .left-content {
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+        right: 30px;
+        z-index: 2;
+    }
+    .left h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .left p {
+        font-size: 1.1rem;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* RIGHT COLUMN */
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top-section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 40px;
+        background: #1a2438;
+        gap: 40px;
+    }
+
+    .bottom-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 40px;
+        background: #0f1424;
+        gap: 40px;
+    }
+
+    h3 {
+        color: #f59e0b; /* orange */
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+    }
+
+    .about p {
+        line-height: 1.6;
+        font-size: 0.95rem;
+        color: #d1d5db;
+    }
+
+    .info-row {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #2d3748;
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+    .info-row span:first-child {
+        font-style: italic;
+        color: #9ca3af;
+    }
+
+    .dots {
+        display: flex;
+        gap: 6px;
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+        background: #a3e635; /* green */
+        border-radius: 50%;
+    }
+
+    ul {
+        list-style: none;
+    }
+    ul li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+        font-size: 0.9rem;
+        color: #d1d5db;
+    }
+    ul li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #a3e635; /* green bullet */
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 900px) {
+        .persona-card {
+            grid-template-columns: 1fr;
+        }
+        .top-section, .bottom-section {
+            grid-template-columns: 1fr;
+        }
+        .left {
+            height: 400px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="persona-card">
+    <!-- LEFT -->
+    <div class="left">
+        <div class="left-content">
+            <h1>Sarah</h1>
+            <p>"I want to learn what supports<br>are available for my parent."</p>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <!-- TOP -->
+        <div class="top-section">
+            <div class="about">
+                <h3>About</h3>
+                <p>I am a writer at a marketing firm. My mother was recently diagnosed with lung cancer. I would like to help her to navigate the healthcare system and manage her cancer diagnosis.</p>
+            </div>
+            <div class="details">
+                <div class="info-row">
+                    <span>AGE</span>
+                    <span>28</span>
+                </div>
+                <div class="info-row">
+                    <span>OCCUPATION</span>
+                    <span>Copywriter</span>
+                </div>
+                <div class="info-row">
+                    <span>LOCATION</span>
+                    <span>Vancouver, BC</span>
+                </div>
+                <div class="info-row">
+                    <span>COMPUTER LITERACY</span>
+                    <div class="dots">
+                        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="bottom-section">
+            <div>
+                <h3>Tasks</h3>
+                <ul>
+                    <li>I want to learn what supports are available for my parent.</li>
+                    <li>I want to know what advice I can give my parent.</li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">Influences</h3>
+                <ul>
+                    <li>My mom who has cancer.</li>
+                    <li>Stigma. I feel like my loved one is being treated as second-class.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Feelings</h3>
+                <ul>
+                    <li>Protective.</li>
+                    <li>Powerless due to the "bystander effect".</li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">Pain Points</h3>
+                <ul>
+                    <li>Ambiguity around the question of how long my mom will live.</li>
+                    <li>Information overload on the website.</li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">Goals</h3>
+                <ul>
+                    <li>To learn how long my mom will live.</li>
+                    <li>To protect and support my mom.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
