@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0a0f1e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.persona-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    background: #121a2e;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* LEFT COLUMN - IMAGE */
+.left {
+    position: relative;
+    background: url(Image/Sarah.jpeg) center/cover no-repeat; /* USE YOUR IMAGE */
+    min-height: 800px;
+}
+.left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
+.left-content {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center; /* CENTERED SARAH + DESCRIPTION */
+    padding: 0 30px;
+}
+.left h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+.left p {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #e5e7eb;
+}
+
+/* RIGHT COLUMN */
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 50px 40px;
+    background: #1a2438;
+    gap: 50px;
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 40px;
+    background: #0f1424;
+    gap: 50px;
+}
+
+h3 {
+    font-weight: 700;
+    color: #f59e0b; /* ORANGE LIKE IMAGE */
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+.bottom-section h3 {
+    margin-top: 35px;
+}
+.bottom-section h3:first-child {
+    margin-top: 0;
+}
+
+.about p {
+    line-height: 1.7;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #d1d5db;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #2d3748;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+.info-row span:first-child {
+    font-style: italic;
+    font-weight: 400;
+    color: #9ca3af;
+}
+.info-row span:last-child {
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #c7e845; /* LIME GREEN LIKE IMAGE */
+    border-radius: 50%;
+}
+
+ul {
+    list-style: none;
+}
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 14px;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #d1d5db;
+}
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #c7e845; /* LIME GREEN BULLET */
+    font-size: 1.2rem;
+    top: -2px;
+}
+
+@media (max-width: 900px) {
+    .persona-card {
+        grid-template-columns: 1fr;
+    }
+    .top-section, .bottom-section {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+    }
+    .left {
+        height: 500px;
+        min-height: unset;
+    }
+}
